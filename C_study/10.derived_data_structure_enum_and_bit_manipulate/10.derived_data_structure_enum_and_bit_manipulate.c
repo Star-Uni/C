@@ -125,13 +125,13 @@ int main(){
     // but most common use of typedef is to ignore the structure tag and give a better alias for it
     /*
     Most common way is:
-    struct date{
+    typedef struct date{
 
         unsigned short y;
         unsigned short m;
         unsigned short d;
         unsigned short date[3];
-    };typedef struct date Date;
+    }Date;
     ...
     Date a_date = {...};
     */
@@ -158,13 +158,11 @@ int main(){
 
     // To better utilize an union, it can be defined:
 
-    struct type1{
+    typedef struct type1{
 
         enum t{I,F,S,D} t;
         Type x;
-    };
-
-    typedef struct type1 Type1;
+    }Type1;
 
     // by adding a current type identifier, it prevents confusion of current type
 
